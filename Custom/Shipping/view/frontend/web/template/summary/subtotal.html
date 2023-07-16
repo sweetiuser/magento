@@ -1,0 +1,28 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<tr class="totals">
+    <th class="mark" scope="row" data-bind="text: title"></th>
+    <td class="amount">
+        <span class="price" data-bind ="text: getValue(), attr:{'data-label': title}"></span>
+        <!-- ko foreach: elems() -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+    </td>
+</tr>
+
+<!-- Shipping Method -->
+<tr>
+    <th scope="row" class="mark" data-bind="i18n: 'Shipping Method'"></th>
+    <td data-bind="text: getShippingMethodName()"></td>
+</tr>
+
+<!-- Shipping Cost -->
+<tr>
+    <th scope="row" class="mark" data-bind="i18n: 'Shipping Cost'"></th>
+    <td data-bind="text: getFormattedShippingCost()"></td>
+</tr>
